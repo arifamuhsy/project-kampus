@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light">
+    <div class="container">
+        <a class="navbar-brand me-2" href="https://mdbgo.com/">
+            <img
+              src="https://i2.wp.com/www.indivaragroup.com/wp-content/uploads/2015/10/Indivara-Logo.jpg?resize=160%2C165"
+              height="16"
+              alt="MDB Logo"
+              loading="lazy"
+              style="margin-top: -1px;"
+            />
+        </a>
+        <button mat-flat-button [matMenuTriggerFor]="menu">Login</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item [routerLink]="'/login'">Students</button>
+          <button mat-menu-item>Lecturer</button>
+        </mat-menu>
+    </div>
+  </nav>
