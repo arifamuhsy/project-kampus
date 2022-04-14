@@ -27,43 +27,32 @@
       </div>
     </div>
   </section> -->
+
+
 <section class="vh-100">
   <div class="container-fluid py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
         <img src="assets/images/login.png"  id="img-fluid" class="h-auto mw-100" alt="" />
       </div>
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border">
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border border-2 rounded-3">
         <form class="m-3">
           <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>
-          <!-- Email input -->
+          <!-- Username input -->
           <div class="form-outline mb-4">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="Enter a valid email address" />
-            <label class="form-label" for="form3Example3">Email address</label>
+            <label class="form-label" for="form3Example3">Username</label>
+            <input type="text" id="typeUsername" class="form-control form-control-lg" placeholder="Username" [formControl]="username" />
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-3">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
             <label class="form-label" for="form3Example4">Password</label>
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
-            </div>
-            <a href="#!" class="text-body">Forgot password?</a>
+            <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" [formControl]="password" />
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2">
             <button type="button" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+              style="padding-left: 2.5rem; padding-right: 2.5rem;"[routerLink]="'/student'">Login</button>
           </div>
 
         </form>

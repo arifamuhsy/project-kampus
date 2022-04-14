@@ -14,6 +14,13 @@ const routes: Routes = [
     loadChildren:async () => {
       const m= await import('./auth/auth.module');
       return m.AuthModule;
+    },
+  },
+  {
+    path: '',
+    loadChildren:async () => {
+      const m= await import('./student/student.module');
+      return m.StudentModule;      
     }
   }
 ];
