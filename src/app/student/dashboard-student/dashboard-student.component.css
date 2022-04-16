@@ -7,6 +7,7 @@
 
 .mat-expansion-panel{
     background-color: #212529;
+    box-shadow:none;
 }
 
 .mat-expansion-panel-header-title{
@@ -17,7 +18,7 @@
     color: blue;
  }
  
- .mat-raised-button.mat-blue, .mat-flat-button.mat-blue{
-    background-color: blue;
+ .mat-flat-button, .mat-flat-button.mat-blue{
+    background-color: transparent;
     color: white;
  }

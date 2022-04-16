@@ -13,7 +13,7 @@
                           Account
                         </mat-panel-title>
                       </mat-expansion-panel-header>
-                      <p>I'm visible because I am open</p>
+                      <a mat-flat-button href="student">Edit Password</a>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true"
                                          (closed)="panelOpenState = false">
@@ -22,8 +22,7 @@
                           Scores
                         </mat-panel-title>
                       </mat-expansion-panel-header>
-                      <!-- masih stuck di button -->
-                      <button mat-raised-button color="blue">Custom Blue Button</button>
+                      <a mat-flat-button href="student/score">Scores</a>
                     </mat-expansion-panel>
                     <mat-expansion-panel (opened)="panelOpenState = true"
                                          (closed)="panelOpenState = false">
@@ -32,7 +31,8 @@
                           Courses
                         </mat-panel-title>
                       </mat-expansion-panel-header>
-                      <p>I'm visible because I am open</p>
+                      <a mat-flat-button href="student/score">Courses Registration</a>
+                      <a mat-flat-button href="student/score">Schedule</a>
                     </mat-expansion-panel>
                   </mat-accordion>
             </div>
