@@ -1,0 +1,24 @@
+.profile-custom{
+    width: 200px;
+    padding: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.mat-expansion-panel{
+    background-color: #212529;
+    box-shadow:none;
+}
+
+.mat-expansion-panel-header-title{
+    color: white;
+}
+
+.mat-button.mat-blue {
+    color: blue;
+ }
+ 
+ .mat-flat-button, .mat-flat-button.mat-blue{
+    background-color: transparent;
+    color: white;
+ }
