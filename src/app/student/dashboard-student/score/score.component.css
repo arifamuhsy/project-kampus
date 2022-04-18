@@ -6,7 +6,7 @@
 }
 
 .mat-expansion-panel{
-    background-color: #212529;
+    background-color: transparent;
     box-shadow:none;
 }
 
@@ -22,3 +22,7 @@
     background-color: transparent;
     color: white;
  }
+
+.sidebar-custom{
+    background-color: #11324D;
+}
