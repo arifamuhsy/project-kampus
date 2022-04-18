@@ -1,0 +1,49 @@
+<!-- Navigation Dashboard -->
+<app-nav-dashboard></app-nav-dashboard>
+<!-- Sidebar -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 px-1 sidebar-custom position-fixed" id="sticky-sidebar">
+            <div class="text-center m-3">
+                <img src="assets/images/profile.png" class="profile-custom rounded-circle" alt="..." />
+            </div>
+            <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
+                <mat-accordion>
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Account
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <a mat-flat-button href="student">Edit Password</a>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Scores
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <a mat-flat-button href="student/score">Scores</a>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Courses
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <a mat-flat-button href="student/courses-registration">Courses Registration</a>
+                      <a mat-flat-button href="student">Schedule</a>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-10 offset-2 mt-2" id="main">
+          
+        </div>
+    </div>
+    <div class="row mt-2">
+      <app-footer-dashboard></app-footer-dashboard>
+    </div>
+</div>

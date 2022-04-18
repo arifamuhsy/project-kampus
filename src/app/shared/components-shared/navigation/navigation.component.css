@@ -1,9 +1,13 @@
-.btn-custom{
-    color: #fff;
-    background-color: #27c49a;
-    border-color: #27c49a;
+.navbar-custom{
+    background-color: #005555;
 }
 
-.mat-menu-panel {
-    background: #3f51b5;
+.mat-flat-button{
+    background-color: transparent;
+    color: white;
+}
+
+.mat-menu-panel{
+    background-color: #005555;
+    color: white;
 }

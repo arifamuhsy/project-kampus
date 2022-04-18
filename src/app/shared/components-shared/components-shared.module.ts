@@ -7,6 +7,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {RouterModule} from '@angular/router';
 import { NavDashboardComponent } from './nav-dashboard/nav-dashboard.component';
 import { FooterDashboardComponent } from './footer-dashboard/footer-dashboard.component'
+import { IconsModule } from 'angular-bootstrap-md';
+import { NavAuthComponent } from './nav-auth/nav-auth.component';
 
 
 
@@ -15,14 +17,16 @@ import { FooterDashboardComponent } from './footer-dashboard/footer-dashboard.co
     NavigationComponent,
     FooterComponent,
     NavDashboardComponent,
-    FooterDashboardComponent
+    FooterDashboardComponent,
+    NavAuthComponent
   ],
   imports: [
     CommonModule,
     MatMenuModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    IconsModule
   ],
-  exports: [NavigationComponent,FooterComponent,NavDashboardComponent,FooterDashboardComponent]
+  exports: [NavigationComponent,FooterComponent,NavDashboardComponent,FooterDashboardComponent,NavAuthComponent]
 })
 export class ComponentsSharedModule { }

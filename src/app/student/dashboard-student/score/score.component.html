@@ -31,8 +31,8 @@
                           Courses
                         </mat-panel-title>
                       </mat-expansion-panel-header>
-                      <a mat-flat-button href="student/score">Courses Registration</a>
-                      <a mat-flat-button href="student/score">Schedule</a>
+                      <a mat-flat-button href="student/courses-registration">Courses Registration</a>
+                      <a mat-flat-button href="student">Schedule</a>
                     </mat-expansion-panel>
                   </mat-accordion>
             </div>
@@ -43,26 +43,41 @@
           <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
             <!-- Position Column -->
             <ng-container matColumnDef="position">
-              <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef> Subject ID </mat-header-cell>
               <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
             </ng-container>
           
             <!-- Name Column -->
             <ng-container matColumnDef="name">
-              <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef> Subject Name </mat-header-cell>
               <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="period">
+              <mat-header-cell *matHeaderCellDef> Period </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.period}} </mat-cell>
             </ng-container>
           
             <!-- Weight Column -->
             <ng-container matColumnDef="weight">
-              <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef> Quiz </mat-header-cell>
               <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
             </ng-container>
           
             <!-- Symbol Column -->
             <ng-container matColumnDef="symbol">
-              <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+              <mat-header-cell *matHeaderCellDef> Mid Test </mat-header-cell>
               <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="finalTest">
+              <mat-header-cell *matHeaderCellDef> Final Test </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.finalTest}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="index">
+              <mat-header-cell *matHeaderCellDef> Index </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.index}} </mat-cell>
             </ng-container>
           
             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

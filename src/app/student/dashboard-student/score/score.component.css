@@ -11,7 +11,7 @@
 }
 
 .mat-expansion-panel-header-title{
-    color: white;
+    color: black;
 }
 
 .mat-button.mat-blue {
@@ -20,9 +20,9 @@
  
  .mat-flat-button, .mat-flat-button.mat-blue{
     background-color: transparent;
-    color: white;
+    color: black;
  }
 
 .sidebar-custom{
-    background-color: #11324D;
+    background-color: white;
 }

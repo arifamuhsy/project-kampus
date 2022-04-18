@@ -13,6 +13,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { CoursesRegistrationComponent } from './dashboard-student/courses-registration/courses-registration.component';
 
 
 
@@ -20,6 +21,7 @@ import { MatTableModule } from '@angular/material/table';
   declarations: [
     DashboardStudentComponent,
     ScoreComponent,
+    CoursesRegistrationComponent,
   ],
   imports: [
     CommonModule,
