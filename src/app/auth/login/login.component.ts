@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginuserService } from '../loginuser.service';
+import { FormControl } from '@angular/forms';
 import { User } from '../user';
 
 @Component({
@@ -18,5 +19,9 @@ export class LoginComponent implements OnInit {
       alert("Login Success")
     },error=>alert("Sorry, please enter correct username and password"));
   }
+
+  username = new FormControl('');
+  email = new FormControl('');
+  password = new FormControl('');
 
 }

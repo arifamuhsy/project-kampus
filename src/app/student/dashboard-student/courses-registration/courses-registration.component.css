@@ -26,3 +26,17 @@
 .sidebar-custom{
     background-color: white;
 }
+
+.user-data{
+    font-size: 1vw;
+}
+
+.example-container {
+    height: 300px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+  }
+  

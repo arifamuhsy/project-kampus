@@ -36,7 +36,7 @@ import { CoursesRegistrationComponent } from './dashboard-student/courses-regist
     MatNativeDateModule,
     ComponentsSharedModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
   ]
 })
 export class StudentModule { }
