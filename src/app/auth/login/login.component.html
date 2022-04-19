@@ -37,23 +37,23 @@
         <img src="assets/images/login.png"  id="img-fluid" class="h-auto mw-100" alt="" />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border border-2 rounded-3">
-        <form class="m-3">
+        <form class="m-3" (ngSubmit)="userLogin()">
           <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>
           <!-- Username input -->
           <div class="form-outline mb-4">
             <label class="form-label" for="form3Example3">Username</label>
-            <input type="text" id="typeUsername" class="form-control form-control-lg" placeholder="Username" [formControl]="username" />
+            <input type="text" class="form-control form-control-lg" [(ngModel)]="user.username" id="username" name="username" />
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-3">
             <label class="form-label" for="form3Example4">Password</label>
-            <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" [formControl]="password" />
+            <input type="password" class="form-control form-control-lg" [(ngModel)]="user.password" id="password" name="password" />
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="button" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;"[routerLink]="'/student'">Login</button>
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
           </div>
 
         </form>

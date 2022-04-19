@@ -1,0 +1,33 @@
+<section class="vh-100">
+    <app-nav-auth></app-nav-auth>
+    <div class="container-fluid py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="assets/images/login-lecturer.png"  id="img-fluid" class="h-auto mw-100" alt="" />
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border border-2 rounded-3">
+          <form class="m-3">
+            <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>
+            <!-- Username input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example3">Username</label>
+              <input type="text" id="typeUsername" class="form-control form-control-lg" placeholder="Username" [formControl]="username" />
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <label class="form-label" for="form3Example4">Password</label>
+              <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" [formControl]="password" />
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="button" class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;"[routerLink]="'/lecturer'">Login</button>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+    <app-footer-dashboard></app-footer-dashboard>
+  </section>

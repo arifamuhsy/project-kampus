@@ -21,8 +21,15 @@ const routes: Routes = [
     loadChildren:async () => {
       const m= await import('./student/student.module');
       return m.StudentModule;      
-    }
-  }
+    },
+  },
+  {
+    path: '',
+    loadChildren:async () => {
+      const m= await import('./lecturer/lecturer.module');
+      return m.LecturerModule;  
+    },
+  },
 ];
 
 @NgModule({

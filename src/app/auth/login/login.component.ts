@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { LoginuserService } from '../loginuser.service';
+import { User } from '../user';
 
 @Component({
   selector: 'app-login',
@@ -7,13 +8,15 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor() { }
+  user:User = new User();
+  constructor(private loginuserservice: LoginuserService) { }
 
   ngOnInit(): void {
   }
-
-  username = new FormControl('');
-  email = new FormControl('');
-  password = new FormControl('');
+  userLogin(){
+    this.loginuserservice.loginUser(this.user).subscribe(data=>{
+      alert("Login Success")
+    },error=>alert("Sorry, please enter correct username and password"));
+  }
 
 }
