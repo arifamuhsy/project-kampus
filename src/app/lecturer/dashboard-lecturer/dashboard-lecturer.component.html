@@ -1,1 +1,153 @@
-<p>dashboard-lecturer works!</p>
+<!-- Navigation Dashboard -->
+<app-nav-dashboard></app-nav-dashboard>
+<!-- Sidebar -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 px-1 sidebar-custom position-fixed">
+            <div class="text-center m-3">
+                <img src="assets/images/profile-lecturer.png" class="profile-custom rounded-circle mb-2" alt="..." />
+                <div class="user-data text-center">Giva Andriani S.T., M.T.</div>
+                <div class="user-data text-center mt-1">110723383</div>
+            </div>
+            <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
+                <mat-accordion>
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Account
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <a mat-flat-button href="student">Edit Password</a>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Scores
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <a mat-flat-button href="student/score">Add Record Student</a>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Courses
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <a mat-flat-button href="student/courses-registration">Courses Registration</a>
+                      <a mat-flat-button href="student">Schedule</a>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-10 offset-2 mt-2" id="main">
+          <!-- Carousel -->
+          <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [isControls]="false">
+            <mdb-carousel-item>
+              <img class="d-block w-100" src="assets/carousel/carousel-1.png" alt="First slide">
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+              <img class="d-block w-100" src="assets/carousel/carousel-2.png" alt="Second slide">
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+              <img class="d-block w-100" src="assets/carousel/carousel-3.png" alt="Third slide">
+            </mdb-carousel-item>
+          </mdb-carousel>
+
+          <!-- News 1 -->
+          <div class="row mt-3">
+            <div class="col-4">
+              <mat-card class="example-card">
+                <img mat-card-image src="assets/news/news-1.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>MORE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col-4">
+              <mat-card class="example-card">
+                <img mat-card-image src="assets/news/news-1.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>MORE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col-4">
+              <mat-card class="example-card">
+                <img mat-card-image src="assets/news/news-1.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>MORE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+          <!-- News 2 -->
+          <!-- <div class="row mt-3">
+            <div class="col-4">
+              <mat-card class="example-card">
+                <img mat-card-image src="assets/news/news-1.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>MORE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col-4">
+              <mat-card class="example-card">
+                <img mat-card-image src="assets/news/news-1.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>MORE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+            <div class="col-4">
+              <mat-card class="example-card">
+                <img mat-card-image src="assets/news/news-1.png" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>MORE</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div> -->
+        </div>
+    </div>
+    <div class="row mt-2">
+      <app-footer-dashboard></app-footer-dashboard>
+    </div>
+</div>

@@ -1,25 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
 export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-  index: string;
+  subjectName: string;
+  subjectID: number;
+  quiz: number;
+  midTest: number;
+  grade: string;
   finalTest: number;
   period: number;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H',index: 'A',finalTest: 80, period: 2},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He',index: 'A',finalTest: 80, period: 2,},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li',index: 'A',finalTest: 80, period: 2},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be',index: 'A',finalTest: 80, period: 2},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B',index: 'A',finalTest: 80, period: 2},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C',index: 'A',finalTest: 80, period: 2},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N',index: 'A',finalTest: 80, period: 2},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O',index: 'A',finalTest: 80, period: 2},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F',index: 'A',finalTest: 80, period: 2},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne',index: 'A',finalTest: 80, period: 2},
+  {subjectID: 1, subjectName: 'Bahasa Inggris I', period: 1, quiz: 60, midTest:80,finalTest: 80,grade: 'A'},
+  {subjectID: 2, subjectName: 'Matematika Teknik', period: 1, quiz: 55, midTest: 60,finalTest: 80,grade: 'C',},
+  {subjectID: 4, subjectName: 'Sistem Komputer', period: 1, quiz: 70, midTest: 75,finalTest: 80,grade: 'B'},
+  {subjectID: 5, subjectName: 'Algoritma Pemrograman', period: 1, quiz: 75, midTest: 77,finalTest: 80,grade: 'A'},
+  {subjectID: 8, subjectName: 'Sistem Interface', period: 1, quiz: 100, midTest: 90,finalTest: 80,grade: 'A'},
 ];
 
 @Component({
@@ -37,7 +32,7 @@ export class ScoreComponent implements OnInit {
   panelOpenState = false;
   panelAktif = true
 
-  displayedColumns: string[] = ['position', 'name', 'period', 'weight', 'symbol','finalTest','index'];
+  displayedColumns: string[] = ['subjectID', 'subjectName', 'period', 'quiz', 'midTest','finalTest','grade'];
   dataSource = ELEMENT_DATA;
 
 }

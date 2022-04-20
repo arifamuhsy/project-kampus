@@ -14,6 +14,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { CoursesRegistrationComponent } from './dashboard-student/courses-registration/courses-registration.component';
+import { MyCoursesComponent } from './dashboard-student/my-courses/my-courses.component';
 
 
 
@@ -22,6 +23,7 @@ import { CoursesRegistrationComponent } from './dashboard-student/courses-regist
     DashboardStudentComponent,
     ScoreComponent,
     CoursesRegistrationComponent,
+    MyCoursesComponent,
   ],
   imports: [
     CommonModule,

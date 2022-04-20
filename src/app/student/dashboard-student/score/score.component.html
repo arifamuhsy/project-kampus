@@ -42,17 +42,18 @@
 
         <!-- Content -->
         <div class="col-10 offset-2 mt-2" id="main">
-          <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+          <div class="breadcumb fs-2 mt-5 bold text-uppercase text-center">My Scores</div>
+          <mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-4">
             <!-- Position Column -->
-            <ng-container matColumnDef="position">
+            <ng-container matColumnDef="subjectID">
               <mat-header-cell *matHeaderCellDef> Subject ID </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+              <mat-cell *matCellDef="let element"> {{element.subjectID}} </mat-cell>
             </ng-container>
           
             <!-- Name Column -->
-            <ng-container matColumnDef="name">
+            <ng-container matColumnDef="subjectName">
               <mat-header-cell *matHeaderCellDef> Subject Name </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+              <mat-cell *matCellDef="let element"> {{element.subjectName}} </mat-cell>
             </ng-container>
             
             <ng-container matColumnDef="period">
@@ -61,15 +62,15 @@
             </ng-container>
           
             <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
+            <ng-container matColumnDef="quiz">
               <mat-header-cell *matHeaderCellDef> Quiz </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+              <mat-cell *matCellDef="let element"> {{element.quiz}} </mat-cell>
             </ng-container>
           
             <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
+            <ng-container matColumnDef="midTest">
               <mat-header-cell *matHeaderCellDef> Mid Test </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+              <mat-cell *matCellDef="let element"> {{element.midTest}} </mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="finalTest">
@@ -77,9 +78,9 @@
               <mat-cell *matCellDef="let element"> {{element.finalTest}} </mat-cell>
             </ng-container>
 
-            <ng-container matColumnDef="index">
-              <mat-header-cell *matHeaderCellDef> Index </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.index}} </mat-cell>
+            <ng-container matColumnDef="grade">
+              <mat-header-cell *matHeaderCellDef> Grade </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.grade}} </mat-cell>
             </ng-container>
           
             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
