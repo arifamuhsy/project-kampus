@@ -12,11 +12,17 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { AddRecordComponent } from './dashboard-lecturer/add-record/add-record.component';
+import { ScheduleComponent } from './dashboard-lecturer/schedule/schedule.component';
+import { AddCoursesComponent } from './dashboard-lecturer/add-courses/add-courses.component';
 
 
 @NgModule({
   declarations: [
-    DashboardLecturerComponent
+    DashboardLecturerComponent,
+    AddRecordComponent,
+    ScheduleComponent,
+    AddCoursesComponent
   ],
   imports: [
     CommonModule,
