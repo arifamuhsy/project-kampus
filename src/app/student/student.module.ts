@@ -15,6 +15,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { CoursesRegistrationComponent } from './dashboard-student/courses-registration/courses-registration.component';
 import { MyCoursesComponent } from './dashboard-student/my-courses/my-courses.component';
+import { MyScheduleComponent } from './dashboard-student/my-schedule/my-schedule.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -24,6 +26,7 @@ import { MyCoursesComponent } from './dashboard-student/my-courses/my-courses.co
     ScoreComponent,
     CoursesRegistrationComponent,
     MyCoursesComponent,
+    MyScheduleComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +42,7 @@ import { MyCoursesComponent } from './dashboard-student/my-courses/my-courses.co
     ComponentsSharedModule,
     MatPaginatorModule,
     MatTableModule,
+    HttpClientModule
   ]
 })
 export class StudentModule { }

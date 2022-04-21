@@ -1,1 +1,102 @@
-<p>add-record works!</p>
+<!-- Navigation Dashboard -->
+<app-nav-dashboard></app-nav-dashboard>
+<!-- Sidebar -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 px-1 sidebar-custom position-fixed">
+            <div class="text-center m-3">
+                <img src="assets/images/profile-lecturer.png" class="profile-custom rounded-circle mb-2" alt="..." />
+                <div class="user-data text-center">Giva Andriani S.T., M.T.</div>
+                <div class="user-data text-center mt-1">110723383</div>
+            </div>
+            <div class="nav flex-column flex-nowrap vh-100 overflow-auto p-2">
+              <button mat-flat-button [routerLink]="'/lecturer/add-record'"><i class="bi bi-journal-check" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Add Record</button>
+              <button mat-flat-button [routerLink]="'/lecturer/add-courses'"><i class="bi bi-pencil-square" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Course Registration</button>
+              <button mat-flat-button [routerLink]="'/lecturer/profile'"><i class="bi bi-person-circle" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Edit Profile</button>
+              <button mat-flat-button [routerLink]="'/lecturer/'"><i class="bi bi-book" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;My Course</button>
+              <button mat-flat-button [routerLink]="'/lecturer/schedule'"><i class="bi bi-clock" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Schedule</button>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-10 offset-2 mt-2" id="main">
+          <div class="breadcumb fs-2 mt-5 bold text-uppercase text-center">List Student</div>
+          <mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-4">
+            <!-- Position Column -->
+            <ng-container matColumnDef="subjectID">
+              <mat-header-cell *matHeaderCellDef> Subject ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.subjectID}} </mat-cell>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="subjectName">
+              <mat-header-cell *matHeaderCellDef> Subject Name </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.subjectName}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="studentID">
+              <mat-header-cell *matHeaderCellDef> Student ID </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.studentID}} </mat-cell>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="studentName">
+              <mat-header-cell *matHeaderCellDef> Student Name </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.studentName}} </mat-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="period">
+              <mat-header-cell *matHeaderCellDef> Period </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.period}} </mat-cell>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="quiz">
+              <mat-header-cell *matHeaderCellDef> Quiz </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.quiz}} </mat-cell>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="midTest">
+              <mat-header-cell *matHeaderCellDef> Mid Test </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.midTest}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="finalTest">
+              <mat-header-cell *matHeaderCellDef> Final Test </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.finalTest}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="grade">
+              <mat-header-cell *matHeaderCellDef> Grade </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.grade}} </mat-cell>
+            </ng-container>
+          
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+          <form class="mt-4">
+            <div class="row">
+              <div class="col-3 form-outline mb-4">
+                <label class="form-label" for="form3Example3">Student ID</label>
+                <input type="text" class="form-control form-control-lg" />
+              </div>
+              <div class="col-3 form-outline mb-4">
+                <label class="form-label" for="form3Example3">Subject ID</label>
+                <input type="text" class="form-control form-control-lg" />
+              </div>
+              <div class="col-3 form-outline mb-4">
+                <label class="form-label" for="form3Example3">Record</label>
+                <input type="text" class="form-control form-control-lg" />
+              </div>
+              <div class="col-3 form-outline align-self-center">
+                <button type="button" class="btn btn-primary btn-m">Add Record</button>
+              </div>
+            </div>
+          </form>
+        </div>
+    </div>
+    <div class="row mt-2">
+      <app-footer-dashboard></app-footer-dashboard>
+    </div>
+</div>

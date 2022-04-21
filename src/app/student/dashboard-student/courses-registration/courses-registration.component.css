@@ -21,6 +21,7 @@
  .mat-flat-button, .mat-flat-button.mat-blue{
     background-color: transparent;
     color: black;
+    text-align: left;
  }
 
 .sidebar-custom{

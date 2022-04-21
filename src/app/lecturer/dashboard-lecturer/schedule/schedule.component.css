@@ -1,0 +1,33 @@
+.profile-custom{
+    width: 200px;
+    padding: 0.25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.mat-expansion-panel{
+    background-color: transparent;
+    box-shadow:none;
+}
+
+.mat-expansion-panel-header-title{
+    color: black;
+}
+
+.mat-button.mat-blue {
+    color: blue;
+ }
+ 
+ .mat-flat-button, .mat-flat-button.mat-blue{
+    background-color: transparent;
+    color: black;
+    text-align: left;
+ }
+
+.sidebar-custom{
+    background-color: white;
+}
+
+.user-data{
+    font-size: 1vw;
+}

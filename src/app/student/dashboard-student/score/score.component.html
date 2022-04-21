@@ -10,82 +10,41 @@
               <div class="user-data text-center mt-1">62702160072</div>
             </div>
             <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
-                <mat-accordion>
-                    <mat-expansion-panel hideToggle>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Account
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <a mat-flat-button href="student">Edit Password</a>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Scores
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <a mat-flat-button href="student/score">Scores</a>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Courses
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <a mat-flat-button href="student/courses-registration">Courses Registration</a>
-                      <a mat-flat-button href="student">Schedule</a>
-                    </mat-expansion-panel>
-                  </mat-accordion>
+              <button mat-flat-button [routerLink]="'/student/courses-registration'"><i class="bi bi-pencil-square" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Course Registration</button>
+              <button mat-flat-button [routerLink]="'/student/profile'"><i class="bi bi-person-circle" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Edit Profile</button>
+              <button mat-flat-button [routerLink]="'/student/'"><i class="bi bi-book" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;My Course</button>
+              <button mat-flat-button [routerLink]="'/student/'"><i class="bi bi-clock" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Schedule</button>
+              <button mat-flat-button [routerLink]="'/student/score'"><i class="bi bi-journal-check" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Scores</button>
             </div>
         </div>
 
         <!-- Content -->
         <div class="col-10 offset-2 mt-2" id="main">
           <div class="breadcumb fs-2 mt-5 bold text-uppercase text-center">My Scores</div>
-          <mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-4">
-            <!-- Position Column -->
-            <ng-container matColumnDef="subjectID">
-              <mat-header-cell *matHeaderCellDef> Subject ID </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.subjectID}} </mat-cell>
-            </ng-container>
-          
-            <!-- Name Column -->
-            <ng-container matColumnDef="subjectName">
-              <mat-header-cell *matHeaderCellDef> Subject Name </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.subjectName}} </mat-cell>
-            </ng-container>
-            
-            <ng-container matColumnDef="period">
-              <mat-header-cell *matHeaderCellDef> Period </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.period}} </mat-cell>
-            </ng-container>
-          
-            <!-- Weight Column -->
-            <ng-container matColumnDef="quiz">
-              <mat-header-cell *matHeaderCellDef> Quiz </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.quiz}} </mat-cell>
-            </ng-container>
-          
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="midTest">
-              <mat-header-cell *matHeaderCellDef> Mid Test </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.midTest}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="finalTest">
-              <mat-header-cell *matHeaderCellDef> Final Test </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.finalTest}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="grade">
-              <mat-header-cell *matHeaderCellDef> Grade </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.grade}} </mat-cell>
-            </ng-container>
-          
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-          </mat-table>
+          <div class="border mt-4">
+            <table class="table align-middle mb-0 bg-white">
+              <thead class="bg-light">
+                <tr>
+                  <th scope="col">Subject ID</th>
+                  <th scope="col">Period</th>
+                  <th scope="col">Quiz</th>
+                  <th scope="col">Mid Test</th>
+                  <th scope="col">Final Test</th>
+                  <th scope="col">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let score of score">
+                  <th scope="col">{{score.subjectID}}</th>
+                  <th scope="col">{{score.period}}</th>
+                  <th scope="col">{{score.quiz}}</th>
+                  <th scope="col">{{score.midTest}}</th>
+                  <th scope="col">{{score.finalTest}}</th>
+                  <th scope="col">{{score.grade}}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
     </div>
     <div class="row mt-2">

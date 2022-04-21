@@ -9,34 +9,12 @@
                 <div class="user-data text-center">Giva Andriani S.T., M.T.</div>
                 <div class="user-data text-center mt-1">110723383</div>
             </div>
-            <div class="nav flex-column flex-nowrap vh-100 overflow-auto text-white p-2">
-                <mat-accordion>
-                    <mat-expansion-panel hideToggle>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Account
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <a mat-flat-button href="student">Edit Password</a>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Scores
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <a mat-flat-button href="student/score">Add Record Student</a>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel hideToggle>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Courses
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <a mat-flat-button href="student/courses-registration">Courses Registration</a>
-                      <a mat-flat-button href="student">Schedule</a>
-                    </mat-expansion-panel>
-                  </mat-accordion>
+            <div class="nav flex-column flex-nowrap vh-100 overflow-auto p-2">
+              <button mat-flat-button [routerLink]="'/lecturer/add-record'"><i class="bi bi-journal-check" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Add Record</button>
+              <button mat-flat-button [routerLink]="'/lecturer/add-courses'"><i class="bi bi-pencil-square" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Course Registration</button>
+              <button mat-flat-button [routerLink]="'/lecturer/profile'"><i class="bi bi-person-circle" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Edit Profile</button>
+              <button mat-flat-button [routerLink]="'/lecturer/'"><i class="bi bi-book" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;My Course</button>
+              <button mat-flat-button [routerLink]="'/lecturer/schedule'"><i class="bi bi-clock" style="font-size: 1.25rem"></i>&nbsp;&nbsp;&nbsp;Schedule</button>
             </div>
         </div>
 
