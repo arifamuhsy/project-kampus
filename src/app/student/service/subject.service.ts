@@ -10,7 +10,7 @@ import { Subject } from '../model/subject.model';
 export class SubjectService {
 
   constructor(private httpClient: HttpClient) { }
-  baseUrl: string = 'http://localhost:8080';
+  baseUrl: string = 'http://localhost:8080/api/v1';
 
   getAllSubject(): Observable<Subject[]>{
     return this.httpClient.get<Subject[]>(`${this.baseUrl+"/subjects"}`);

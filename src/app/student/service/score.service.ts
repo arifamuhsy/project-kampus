@@ -9,9 +9,21 @@ import { Score } from '../model/score.model';
 export class ScoreService {
 
   constructor(private httpClient: HttpClient) { }
-  baseUrl: string = 'http://localhost:8080';
+  baseUrl: string = 'http://localhost:8080/api/v1';
+  studentID?: number
 
   getAllScore(): Observable<Score[]>{
-    return this.httpClient.get<Score[]>(`${this.baseUrl+"/studentScore?studentID=1"}`);
+    return this.httpClient.get<Score[]>(`${this.baseUrl+"/studentScore/"+1}`);
+  }
+  
+  // getstudentID(getstudentID?:number){
+  //   this.studentID=getstudentID;
+  // }
+
+  // getAllScoreById(): Observable<Object>{
+  //   return this.httpClient.get<Object>(`${this.baseUrl+"/studentScore/"}/${this.studentID}`);
+  // }
+  getAllScoreById(): Observable<Score[]>{
+    return this.httpClient.get<Score[]>(`${this.baseUrl+"/studentScore/1"}`);
   }
 }
